@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom right, #d7cfff, #ff96ff);
+}
+
+#headbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px -2px 8px 4px #979797;
+    border-radius: 0 0 10px 10px;
+}
+
+#footbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background-color: white;
+    box-shadow: 0px 2px 8px 4px #979797;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+#headbar div {
+    display: flex;
+}
+
+#headbar div img {
+    width: 52px;
+    padding: 16px 20px 0 26px;
+}
+
+#headbar div p {
+    margin: 18px 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(0, 0, 80);
+    letter-spacing: 2px;
+}
+
+#footbar a img {
+    margin-top: 8px;
+    width: 20px;
+}
+
+#footbar a img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
