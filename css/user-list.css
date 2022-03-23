@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+}
+
+#user-list {
+    height: 100%;
+    margin: 6px 20px;
+    overflow: scroll;
+}
+
+#user-list div {
+    padding: 6px 0;
+    border-bottom: solid 1px grey;
+}
+
+#name {
+    font-size: larger;
+    font-weight: bold;
+    color: #080066;
+}
+
+#un {
+    color: grey;
+}
+
+#user-list div button {
+    width: 120px;
+    height: 30px;
+}
