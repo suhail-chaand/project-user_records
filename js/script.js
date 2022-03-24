@@ -56,8 +56,12 @@ function viewDetails(user_num) {
     let user_head = document.getElementById('user-head');
     user_head.innerHTML = null;
     user_details.innerHTML = null;
-    //document.getElementsByClassName('rows').style.backgroundColor = 'white';
-    //document.getElementById(user_num).style.backgroundColor = '#eeecfa';
+    for (i in user_data) {
+        document.getElementById(i).style.backgroundColor = null;
+    }
+    document.getElementById(user_num).style.backgroundColor = '#e4dfff';
+    document.getElementById(user_num).scrollIntoView();
+    user_head.scrollIntoView();
     //User details headline
     let avatar = document.createElement('section');
     avatar.setAttribute('id', 'avatar');

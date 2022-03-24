@@ -22,3 +22,19 @@
 #right-div {
     margin: 16px 16px 16px 10px;
 }
+
+@media screen and (max-width:800px) {
+    #body {
+        margin: 10px;
+        display: block;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: 0;
+        scroll-behavior: smooth;
+    }
+    #left-div,
+    #right-div {
+        width: 94%;
+        margin: 10px;
+    }
+}
