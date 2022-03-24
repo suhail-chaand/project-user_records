@@ -1,10 +1,88 @@
+#user-details {
+    height: 86%;
+    margin: 6px 14px;
+    overflow: scroll;
+}
+
 #user-details p {
+    font-size: 18px;
     text-align: center;
-    padding-top: 50%;
+    padding-top: 40%;
+}
+
+#user-head {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 -6px 14px 0 grey;
+}
+
+#avatar {
+    padding: 4px 0 2px 12px;
+}
+
+#avatar img {
+    width: 58px;
+}
+
+#head-text {
+    padding: 18px 0 0 12px;
 }
 
 #greet {
-    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#ud-name {
+    letter-spacing: 2px;
+    font-weight: 600;
     font-size: 18px;
-    padding: 10px 0;
+}
+
+#del-user {
+    margin-left: auto;
+    margin-right: 20px;
+    float: right;
+}
+
+#del-user button {
+    border: 0;
+    width: 100px;
+    height: 28px;
+    font-size: 16px;
+    background-color: #ffbfff;
+}
+
+#del-user button:hover {
+    cursor: pointer;
+    background-color: #ffa4a4;
+}
+
+.section-headline {
+    margin: 6px 0;
+}
+
+#user-details section {
+    padding: 6px 0;
+    border-bottom: solid 1px #080060;
+}
+
+#user-details section table tr:nth-child(even) {
+    border-bottom: dotted 1px #eeecfa;
+    border-top: dotted 12px #eeecfa;
+}
+
+.title,
+.value {
+    padding: 4px 0;
+}
+
+.title {
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.value {
+    padding-left: 10px;
 }

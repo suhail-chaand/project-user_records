@@ -8,6 +8,12 @@
     overflow: scroll;
 }
 
+#user-list p {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 40%;
+}
+
 .rows {
     padding: 6px 6px;
     border-bottom: solid 1px grey;
@@ -25,5 +31,9 @@
 
 .rows:hover {
     cursor: pointer;
+    background-color: #eeecfa;
+}
+
+#row:active {
     background-color: #eeecfa;
 }
