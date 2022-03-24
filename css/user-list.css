@@ -4,12 +4,12 @@
 
 #user-list {
     height: 100%;
-    margin: 6px 20px;
+    margin: 6px 14px;
     overflow: scroll;
 }
 
-#user-list div {
-    padding: 6px 0;
+.rows {
+    padding: 6px 6px;
     border-bottom: solid 1px grey;
 }
 
@@ -23,7 +23,7 @@
     color: grey;
 }
 
-#user-list div button {
-    width: 120px;
-    height: 30px;
+.rows:hover {
+    cursor: pointer;
+    background-color: #eeecfa;
 }
