@@ -4,7 +4,7 @@
 
 #user-list {
     height: 100%;
-    margin: 6px 14px;
+    margin: 14px 14px;
     overflow: scroll;
 }
 
@@ -20,20 +20,33 @@
 }
 
 #name {
-    font-size: larger;
+    font-size: 18px;
     font-weight: bold;
-    color: #080066;
+    color: #802082
 }
 
 #un {
-    color: grey;
+    color: #575757;
+}
+
+.ul-desc {
+    color: #3d2d6a;
+    line-height: 26px;
 }
 
 .rows:hover {
     cursor: pointer;
-    background-color: #eeecfa;
+    background-color: #ffeffb;
 }
 
-#row:active {
-    background-color: #eeecfa;
+@media screen and (max-width:460px) {
+    #name {
+        font-size: 16px;
+    }
+    #un {
+        font-size: 14px;
+    }
+    .ul-desc {
+        font-size: 14px;
+    }
 }

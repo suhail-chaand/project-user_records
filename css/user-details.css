@@ -54,23 +54,21 @@
     background-color: #ffbfff;
 }
 
-#del-user button:hover {
-    cursor: pointer;
-    background-color: #ffa4a4;
+#user-details section {
+    padding: 6px 0;
+    width: 100%;
+    border-bottom: solid 1px #080060;
+}
+
+#user-details section table {
+    width: 100%;
 }
 
 .section-headline {
     margin: 6px 0;
-}
-
-#user-details section {
-    padding: 6px 0;
-    border-bottom: solid 1px #080060;
-}
-
-#user-details section table tr:nth-child(even) {
-    border-bottom: dotted 1px #eeecfa;
-    border-top: dotted 12px #eeecfa;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: sans-serif;
 }
 
 .title,
@@ -79,10 +77,47 @@
 }
 
 .title {
-    font-family: sans-serif;
-    font-weight: 600;
+    font-family: serif;
 }
 
 .value {
     padding-left: 10px;
+    font-family: sans-serif;
+}
+
+#user-details section table tr:nth-child(odd) {
+    background-color: #f2edff;
+}
+
+#del-user button:hover {
+    cursor: pointer;
+    background-color: #ffa4a4;
+}
+
+@media screen and (max-width:460px) {
+    #avatar {
+        padding: 2px 0 0 10px;
+    }
+    #avatar img {
+        width: 54px;
+    }
+    #head-text {
+        padding: 14px 0 0 8px;
+    }
+    #greet {
+        font-size: 14px;
+    }
+    #ud-name {
+        font-size: 16px;
+    }
+    #del-user button {
+        width: 88px;
+        height: 26px;
+        font-size: 14px;
+    }
+    .section-headline,
+    .title,
+    .value {
+        font-size: 14px;
+    }
 }

@@ -27,14 +27,54 @@
     #body {
         margin: 10px;
         display: block;
+        height: 78%;
         overflow-y: scroll;
         overflow-x: hidden;
-        scrollbar-width: 0;
+        scrollbar-width: none;
         scroll-behavior: smooth;
     }
     #left-div,
     #right-div {
         width: 94%;
         margin: 10px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    #left-div,
+    #right-div {
+        width: 93%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #left-div,
+    #right-div {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    #body {
+        margin: 0 6px;
+        height: 80%;
+    }
+}
+
+@media screen and (min-height:660px) and (max-width:800px) {
+    #body {
+        height: 84%;
+    }
+}
+
+@media screen and (min-height:780px) and (max-width:800px) {
+    #body {
+        height: 86%;
+    }
+}
+
+@media screen and (min-height:880px) and (max-width:800px) {
+    #body {
+        height: 88%;
     }
 }

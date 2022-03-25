@@ -24,6 +24,7 @@ body {
     box-shadow: 0px 2px 8px 4px #979797;
     border-radius: 10px 10px 0 0;
     text-align: center;
+    transition-duration: 0.6s;
 }
 
 #headbar div {
@@ -52,4 +53,67 @@ body {
 #footbar a img:hover {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+#query-form p {
+    margin: 10px 0 6px 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #2000b9;
+    font-weight: 510;
+}
+
+.text-in {
+    width: 250px;
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+#form-email {
+    height: 26px;
+}
+
+#form-msg {
+    height: 80px;
+}
+
+.close {
+    width: 126px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+}
+
+#send-btn {
+    background-color: #c6c6ff;
+}
+
+#close-btn {
+    background-color: #e3e3e3;
+}
+
+.close:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+@media screen and (max-width:460px) {
+    #headbar {
+        height: 40px;
+    }
+    #footbar {
+        height: 30px;
+    }
+    #headbar div img {
+        width: 42px;
+        padding: 12px 16px 0 22px;
+    }
+    #headbar div p {
+        margin: 14px 0;
+        font-size: 18px;
+    }
+    #footbar a img {
+        margin-top: 6px;
+        width: 18px;
+    }
 }

@@ -30,10 +30,10 @@ function displayUsers() {
     for (i in user_data) {
         let row = document.createElement('div');
         user_list.appendChild(row);
-        row.innerHTML = '<span id="name">' + user_data[i]['first_name'] + ' ' + user_data[i]['last_name'] + '</span>' +
-            ' ' + '<span id="un">' + user_data[i]['username'] + '</span> <br>' +
-            '<span>' + user_data[i]['employment']['title'] + '</span> <br>' +
-            '<span>' + user_data[i]['address']['country'] + '<span> <br>';
+        row.innerHTML = `<span id="name">${user_data[i]['first_name']} ${user_data[i]['last_name']}</span> 
+        <span id="un">${user_data[i]['username']}</span> <br>
+        <span class="ul-desc">${user_data[i]['employment']['title']}</span> <br>
+        <span class="ul-desc">${user_data[i]['address']['country']}</span>`;
 
         row.setAttribute('id', i);
         row.setAttribute('class', 'rows');
@@ -59,7 +59,7 @@ function viewDetails(user_num) {
     for (i in user_data) {
         document.getElementById(i).style.backgroundColor = null;
     }
-    document.getElementById(user_num).style.backgroundColor = '#e4dfff';
+    document.getElementById(user_num).style.backgroundColor = '#fadcf0';
     document.getElementById(user_num).scrollIntoView();
     user_head.scrollIntoView();
     //User details headline
@@ -76,13 +76,16 @@ function viewDetails(user_num) {
         '!</span><br><span id="ud-name">' + user_data[user_num]['first_name'] + ' ' +
         user_data[user_num]['last_name'] + '</span>';
     user_head.appendChild(head_text);
-    let del_user = document.createElement('section');
+    let del_user = document.createElement('div');
     del_user.setAttribute('id', 'del-user');
-    del_user.innerHTML = '<button onclick="deleteUser(' + user_num + ')">Delete user</button>';
+    let del_btn = document.createElement('button');
+    del_btn.innerHTML = 'Delete user';
+    del_user.appendChild(del_btn);
+    del_btn.addEventListener('click', function() { deleteUser(user_num) });
     user_head.appendChild(del_user);
     //User details
     let identification = document.createElement('section');
-    identification.innerHTML = `<table>
+    identification.innerHTML = `<table cellspacing=0>
         <tr>
             <td class="title">Profession:</td>
             <td class="value">${user_data[user_num]['employment']['title']}</td>
@@ -106,8 +109,8 @@ function viewDetails(user_num) {
         </table>`;
     user_details.appendChild(identification);
     let contact = document.createElement('section');
-    contact.innerHTML = `<h4 class="section-headline">Contact Information</h4>
-    <table>
+    contact.innerHTML = `<h4 class="section-headline">Contact Details</h4>
+    <table cellspacing=0>
         <tr>
             <td class="title">E-Mail:</td>
             <td class="value">${user_data[user_num]['email']}</td>
@@ -128,8 +131,8 @@ function viewDetails(user_num) {
     </table>`;
     user_details.appendChild(contact);
     let subscription = document.createElement('section');
-    subscription.innerHTML = `<h4 class="section-headline">Subscription Information</h4>
-    <table>    
+    subscription.innerHTML = `<h4 class="section-headline">Subscription Details</h4>
+    <table cellspacing=0>    
         <tr>
             <td class="title">Plan:</td>
             <td class="value">${user_data[user_num]['subscription']['plan']}</td>
@@ -147,7 +150,7 @@ function viewDetails(user_num) {
             <td class="value">${user_data[user_num]['credit_card']['cc_number']}</td>
         </tr>
         <tr>
-            <td class="title">Staus:</td>
+            <td class="title">Status:</td>
             <td class="value">${user_data[user_num]['subscription']['status']}</td>
         </tr>
     </table>`;
@@ -157,9 +160,11 @@ function viewDetails(user_num) {
 /* 
 Delete user
 */
-function deleteUser(user_num) {
-    delete user_data[user_num];
-    displayUsers();
+function deleteUser(del_num) {
+    if (confirm('Delete user?') == true) {
+        delete user_data[del_num];
+        displayUsers();
+    }
 }
 
 /*
@@ -177,4 +182,15 @@ function greet() {
     if (h >= 17) {
         return 'Good Evening'
     }
+}
+
+/* 
+Open send query form
+*/
+function open_form() {
+    document.getElementById('footbar').style.height = '260px';
+}
+
+function close_form() {
+    document.getElementById('footbar').style.height = '36px';
 }

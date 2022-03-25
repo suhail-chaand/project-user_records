@@ -4,6 +4,7 @@
 
 <head>
     <title>User Records</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/title-icon.png">
     <link rel="stylesheet" type="text/css" href="./css/bars.css">
     <link rel="stylesheet" type="text/css" href="./css/divs.css">
@@ -33,7 +34,14 @@
     </div>
     <script src="./js/script.js"></script>
     <div id="footbar">
-        <a><img src="./images/footbar-icon.png"></a>
+        <a onclick="open_form()"><img src="./images/footbar-icon.png"></a>
+        <div id="query-form">
+            <p>Send Query</p>
+            <input id="form-email" class="text-in" type="text" placeholder="example@email.com"><br>
+            <textarea id="form-msg" class="text-in" type="text" placeholder="Your message"></textarea><br>
+            <button id="send-btn" class="close" onclick="close_form()">Send</button>
+            <button id="close-btn" class="close" onclick="close_form()">Close</button>
+        </div>
     </div>
 </body>
 
